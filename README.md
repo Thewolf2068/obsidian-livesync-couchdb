@@ -30,3 +30,12 @@ services:
       - 5984:5984
     restart: unless-stopped
 ```
+
+## Next Steps
+
+Once your container is running and you have copied your encrypted Setup URI from the logs, you need to configure the Obsidian plugin:
+
+1. Install **Obsidian LiveSync** from the community plugins list in Obsidian.
+2. Open the plugin settings and use the **Setup URI** to configure your connection.
+
+For full instructions on using the plugin, refer to the [official Obsidian LiveSync repository](https://github.com/vrtmrz/obsidian-livesync).
