@@ -10,6 +10,12 @@ set -e
 
 COUCH_URL="http://localhost:${COUCHDB_PORT:-5984}"
 
+# ---- NEW: Inject Admin Credentials ----
+# Manually write the credentials so the CouchDB binary doesn't panic
+echo "Configuring CouchDB admin account..."
+echo "[admins]" > /opt/couchdb/etc/local.d/docker.ini
+echo "${COUCHDB_USER} = ${COUCHDB_PASSWORD}" >> /opt/couchdb/etc/local.d/docker.ini
+
 # ---- Start CouchDB in background ----
 /opt/couchdb/bin/couchdb &
 
