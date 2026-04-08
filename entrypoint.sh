@@ -46,17 +46,16 @@ if [ ! -f /opt/couchdb/data/.ols_initialized ]; then
     export username="$COUCHDB_USER"
     export password="$COUCHDB_PASSWORD"
 
-    echo ""
+echo ""
     echo "========================================"
     echo "  Self-hosted LiveSync Setup"
     echo "========================================"
     echo ""
+    export DENO_DIR="/tmp/deno" 
+    
     deno run -A /generate_setupuri.ts
     echo ""
     echo "  Save the passphrase above somewhere safe."
-    echo "  It will NOT be shown again."
-    echo "========================================"
-    echo ""
 
     touch /opt/couchdb/data/.ols_initialized
 else
