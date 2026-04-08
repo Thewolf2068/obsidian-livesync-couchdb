@@ -1,0 +1,17 @@
+services:
+  couchdb-livesync:
+    image: TheWolf2068/obsidian-livesync-server:1
+    container_name: couchdb-livesync
+    environment:
+      COUCHDB_USER: admin
+      COUCHDB_PASSWORD: changeme
+      OLS_HOSTNAME: https://obsidian.yourdomain.com
+      OLS_DATABASE: obsidiannotes
+      OLS_PASSPHRASE: changeme
+      # Optional: override CouchDB port (default 5984)
+      # COUCHDB_PORT: 5984
+    volumes:
+      - ./data:/opt/couchdb/data
+    ports:
+      - 5984:5984
+    restart: unless-stopped
