@@ -1,13 +1,16 @@
 # Obsidian LiveSync CouchDB
 
+__Project Status: Maintenance Mode. CouchDB and the LiveSync plugin rarely change their core container requirements. A lack of recent commits indicates this image is stable, not abandoned. In case anything ever happens, I will try to fix it ASAP__
+
 A custom CouchDB Docker image that fully automates the database initialization process for Obsidian LiveSync. This eliminates the need to manually execute setup scripts inside the container, allowing for a fully declarative, IaC deployment.
+
 
 # Usage
 
 Deploy using Docker Compose. The container will automatically create the admin user, configure the required database settings, and generate the setup URI on its first boot.
 
 __Note: Upon initial startup, check the container logs (docker logs couchdb-livesync). The encrypted Setup URI required for the Obsidian plugin will be printed there.__
-```
+```yaml
 services:
   couchdb-livesync:
     image: ghcr.io/thewolf2068/obsidian-livesync-couchdb:1
