@@ -38,4 +38,4 @@ Once your container is running and you have copied your encrypted Setup URI from
 1. Install **Obsidian LiveSync** from the community plugins list in Obsidian.
 2. Open the plugin settings and use the **Setup URI** to configure your connection.
 
-For full instructions on using the plugin, refer to the [official Obsidian LiveSync repository](https://github.com/vrtmrz/obsidian-livesync).
+For full instructions on using the plugin, refer to the [official Obsidian LiveSync repository](https://github.com/vrtmrz/obsidian-livesync/blob/main/docs/setup_own_server.md#2-setup-self-hosted-livesync-to-obsidian).
